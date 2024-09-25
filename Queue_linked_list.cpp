@@ -54,20 +54,14 @@ public:
         delete temp;
         return var;
     }
-    void print()
+    int peek()
     {
         if (Front==nullptr)
         {
             cout << "Queue is Empty"<<endl;
-            return;
+            return -1;
         }
-        Node<type> *temp = Front;
-        while(temp!=nullptr)
-        {
-            cout << temp->data << "  ";
-            temp=temp->next;
-        }
-        cout << endl;
+        return Front->data;
     }
 };
 int main()
@@ -77,10 +71,10 @@ int main()
     Q.enqueue(1);
     Q.enqueue(2);
     Q.enqueue(3);
-    Q.print();
+    Q.peek();
     cout << Q.dequeue() << endl;
     cout << Q.dequeue() << endl;
     cout << Q.dequeue() << endl;
     cout << Q.dequeue() << endl;
-    Q.print();
+    Q.peek();
 }
