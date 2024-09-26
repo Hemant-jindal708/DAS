@@ -99,5 +99,4 @@ int main()
         cout << x.pop() << endl;
     }
 
-    return 0;
 }
